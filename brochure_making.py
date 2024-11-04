@@ -176,7 +176,7 @@ url = st.text_input("Enter the URL of the website:", "")
 if st.button("Generate Brochure"):
     if url:
         try:
-            brochure_content = BrochureGenerator.stream_brochure(name, url)
+            BrochureGenerator.stream_brochure(name, url)
         except Exception as e:
             st.error(f"An error occurred: {e}")
     else:
